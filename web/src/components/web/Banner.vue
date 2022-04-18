@@ -23,22 +23,7 @@ export default {
       imgList: [
         {
           id: 0,
-          imgUrl: 'https://cdn.jsdelivr.net/gh/xanaduwang/aerowang/img/20210604161353.jpg'
-        },
-        {
-          id: 1,
-          imgUrl: 'https://cdn.jsdelivr.net/gh/xanaduwang/aerowang/img/20210604161737.jpg'
-        },
-        {
-          id: 2,
-          imgUrl: 'https://cdn.jsdelivr.net/gh/xanaduwang/aerowang/img/20210604161757.png'
-        },
-        {
-          id: 3,
-          imgUrl: 'https://cdn.jsdelivr.net/gh/xanaduwang/aerowang/img/20210604161818.jpg'
-        }, {
-          id: 4,
-          imgUrl: 'https://cdn.jsdelivr.net/gh/xanaduwang/aerowang/img/20210604161834.jpg'
+          imgUrl: require('../../assets/img/mic-banner-2.jpg')
         }
       ]
     }

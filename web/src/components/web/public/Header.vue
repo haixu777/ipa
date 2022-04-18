@@ -4,8 +4,8 @@
       <div class = "header_content">
         <div class = "logo">
           <router-link to = "/">
-            <img :src = "logo_img[0].path" alt = "logo" v-if = "headerLogoShow===true"/>
-            <img :src = "logo_img[1].path" alt = "logo" v-else/>
+            <!-- <img :src = "logo_img[0].path" alt = "logo" v-if = "headerLogoShow===true"/> -->
+            <img :src="require('../../../assets/img/index/ipa-logo.png')" alt = "logo" />
           </router-link>
         </div>
         <div class = "menu-wrapper">

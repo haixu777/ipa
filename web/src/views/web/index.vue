@@ -32,14 +32,15 @@ export default {
   },
   data () {
     return {
-      BannerHeight: '',
+      BannerHeight: window.innerHeight,
       index_header: ''
     }
   },
   methods: {
     // 设置 Banner 高度
     setBannerHeight () {
-      this.BannerHeight = window.innerHeight
+      // this.BannerHeight = window.innerHeight
+      // this.bannerHeight = 500
       // 接管组件公用数据
       // index 与 Header 组件 共用 BannerHeight
       this.$store.commit('setBannerHeight', {

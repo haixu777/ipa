@@ -2,8 +2,11 @@
   <div class = "overlay">
     <div class = "overlay-content">
       <div class = "slogan sofiaBold">
-        <div class = "slogan-title">互联网+时代</div>
-        <div class = "slogan-subtitle">BELIEVE IN YOURSELF</div>
+        <div class="ipa-logo">
+          <img :src="require('../../assets/img/index/ipa-logo.png')" alt="logo">
+        </div>
+        <div class = "slogan-title">国际认证协会（IPAFT）主持委员会</div>
+        <div class = "slogan-subtitle">International Profession Certification</div>
       </div>
     </div>
   </div>
@@ -31,8 +34,17 @@ export default {
   text-align: center;
   cursor: default;
   //background: rgba(51,112,255,.2);
+  .ipa-logo {
+    width: 300px;
+    height: 278px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
   .slogan {
-    font-size: 54px;
+    font-size: 36px;
     line-height: 61px;
     color: #fff;
     margin-bottom: 67px;
@@ -42,7 +54,7 @@ export default {
     .slogan-subtitle {
       letter-spacing: 16px;
       text-indent: 16px;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 17px;
       opacity: .8;
       margin-top: 14px;
