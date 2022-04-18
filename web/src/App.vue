@@ -27,6 +27,9 @@ export default {
 </script>
 
 <style lang = "less" scoped>
+#app {
+  min-width: 1200px;
+}
 .icon {
   width: 1.3em;
   height: 1.3em;

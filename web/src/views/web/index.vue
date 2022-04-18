@@ -5,9 +5,10 @@
       <Banner :BannerHeight = "BannerHeight"></Banner>
       <over-lay></over-lay>
       <scroll-hint
-        v-scroll-to = "{ element: '.wrap-block',duration: 300, easing: 'ease',offset: 1  }"></scroll-hint>
+        v-scroll-to = "{ element: '.home-container',duration: 300, easing: 'ease',offset: 1  }"></scroll-hint>
     </div>
-    <index-service></index-service>
+    <ipa-home></ipa-home>
+    <!-- <index-service></index-service> -->
     <AwFooter></AwFooter>
   </div>
 </template>
@@ -18,12 +19,14 @@ import ScrollHint from '../../components/web/scrollHint'
 import OverLay from '../../components/web/overLayText'
 import AwHeader from '../../components/web/public/Header'
 import AwFooter from '../../components/web/public/Footer'
-import IndexService from '../../components/web/IndexService'
+// import IndexService from '../../components/web/IndexService'
+import IpaHome from '../../components/web/IpaHome.vue'
 
 export default {
   name: 'index',
   components: {
-    IndexService,
+    IpaHome,
+    // IndexService,
     Banner,
     ScrollHint,
     OverLay,
@@ -32,7 +35,7 @@ export default {
   },
   data () {
     return {
-      BannerHeight: window.innerHeight,
+      BannerHeight: '100vh',
       index_header: ''
     }
   },

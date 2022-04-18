@@ -1,7 +1,7 @@
 <template>
   <div class = "banner">
     <div class = "Limit">
-      <el-carousel :interval = "2000" arrow = "hover" :height = "BannerHeight+ 'px' " :autoplay = "true"
+      <el-carousel :interval = "2000" arrow = "hover" :height = "BannerHeight" :autoplay = "true"
                    ref = "carousel" trigger = "click" indicator-position = "none">
         <el-carousel-item v-for = "item in imgList" :key = "item.id">
           <div class = "img_con">

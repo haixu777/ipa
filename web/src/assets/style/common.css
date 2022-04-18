@@ -192,3 +192,8 @@ li {
 
 /* 修复交汇时出现的白块 */
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
