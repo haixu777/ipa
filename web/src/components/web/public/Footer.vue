@@ -1,47 +1,22 @@
 <template>
   <div class = "footer_container" :style="footerHeight + 'px'">
     <div class = "footer_content">
-      <div class = "footer_logo footer-content-column">
-        <div class = "logo-container">
-          <img :src = "logo_url" alt = "">
-          <div class="logo-text">
-            <p class="text1">Xanadu</p>
-            <p class="text2">INTERNET COMPANY</p>
-          </div>
+      <div class="company-logo">
+        <img class="company-logo-icon" :src="require('@/assets/img/index/ipa-logo.png')" alt="ipa">
+        <div class="company-cn-name">国际认证协会（IPAFT）主持委员会</div>
+        <div class="company-en-name">INTERNATIONAL CERTIFICATION ASSOCIATION</div>
+      </div>
+      <div class="company-info-text">
+        <p>国际认证协会主持委员会是首个由国际认证协会（IPA）授权的少儿表演认证项目的委员会。委员会在文化发展的大环境下，扎根于行业，服务于艺术培训机构。围绕在国家政府关于少儿艺术行业发展的总体要求，围绕政府大力推广少儿影视表演艺术的要求下，进行创造性地开展工作。切实做好行业规划、行业促进、行业服务及认证考核证书颁发</p>
+      </div>
+      <div class="company-info-QRcode">
+        <div class="vx-code">
+          <img :src="vxQrCodeUrl" alt="qrcode">
+          <div>官方微信号</div>
         </div>
-        <h2>© 2020-2021 Xanadu&nbsp;科技有限公司</h2>
-        <h2>X公网安备 xxxxxxxxxxxxxx号 I ICP备xxxxxxxx号-1</h2>
-      </div>
-      <div class = "about_us footer-content-column">
-        <h2>关于我们</h2>
-        <ul class = "about_list">
-          <li>
-            <router-link to = "/job" target = "_blank">企业文化</router-link>
-          </li>
-        </ul>
-      </div>
-      <div class = "contact_us footer-content-column">
-        <h2>联系我们</h2>
-        <ul class = "contact_list">
-          <li v-for = "(item,index) in contact_way" :key = "index">
-            <a :href = "'mailto:'+item.email">{{ item.name }}</a>
-          </li>
-        </ul>
-      </div>
-      <div class = "focus_us footer-content-column">
-        <h2>实时动态与招聘信息，扫码关注我们</h2>
-        <div class = "media">
-          <div :class = "item.name" v-for = "(item,index) in focus_icon" :key = "index">
-            <el-popover
-              placement = "top"
-              trigger = "hover">
-              <div class = "qr_popover">
-                <img :src = "item.qr" alt = "">
-                <h2>{{ item.info }}</h2>
-              </div>
-              <img :src = "item.path" :alt = "item.name" slot = "reference">
-            </el-popover>
-          </div>
+        <div class="gzh-code">
+          <img :src="gzhQrCodeUrl" alt="qrcode">
+          <div>官方公众号</div>
         </div>
       </div>
     </div>
@@ -55,56 +30,11 @@ export default {
     return {
       footerHeight: '',
       curWidth: '',
-      logo_url: require('../../../assets/img/index/logoColor.png'),
-      contact_way: [
-        {
-          name: '媒体问询',
-          email: 'aerowangue@126.com'
-        },
-        {
-          name: '招聘相关',
-          email: 'aerowangue@126.com'
-        },
-        {
-          name: '商务合作',
-          email: 'aerowangue@126.com'
-        },
-        {
-          name: '广告相关',
-          email: 'aerowangue@126.com'
-        }
-      ],
-      focus_icon: [
-        {
-          name: 'weibo',
-          path: require('../../../assets/img/focus/weibo.png'),
-          qr: require('../../../assets/img/focus/qr_weibo.png'),
-          info: '关注官方微博'
-        },
-        {
-          name: 'weixin',
-          path: require('../../../assets/img/focus/weixin.svg'),
-          qr: require('../../../assets/img/focus/qr_weixin.png'),
-          info: '关注官方微信公众号'
-        },
-        {
-          name: 'bilibili',
-          path: require('../../../assets/img/focus/bilibili.png'),
-          qr: require('../../../assets/img/focus/qr_bilibili.png'),
-          info: '关注官方 bilibili 号'
-        }
-      ]
+      vxQrCodeUrl: 'https://aimg8.dlssyht.cn/u/2015338/module/simplepicbackground/2015338/375/749526_1589965710.jpg?x-oss-process=image/resize,m_fixed,w_81,h_81,limit_0',
+      gzhQrCodeUrl: 'https://aimg8.dlssyht.cn/u/2015338/module/simplepicbackground/2015338/375/749545_1589965760.jpg?x-oss-process=image/resize,m_fixed,w_85,h_83,limit_0'
     }
   },
   methods: {
-    // setFooterHeight () {
-    //   this.curWidth = window.innerWidth
-    //   if (this.curWidth <= 991) {
-    //     this.footerHeight = 570 + 'px'
-    //   } else {
-    //     this.footerHeight = 280 + 'px'
-    //   }
-    // }
   },
   created () {
     // 页面创建时执行一次getHeight进行赋值，顺道绑定resize事件
@@ -127,121 +57,54 @@ h2{
 .footer_container {
   width: 100%;
   background: #1f2329;
-  padding-bottom: 60px;
+  padding: 60px 0;
 }
 
 .footer_content {
   max-width: 1440px;
   color: #fff;
   margin: 0 auto;
-  padding: 69px 0 0;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-
-  h2 {
-    font-size: 14px;
-    line-height: 22px;
-    margin: 4px 0;
-    color: #7b7e81;
+  > div {
+    flex: 1;
   }
-
-  .footer-content-column {
-    flex: 1 1;
-    color: #d2d3d4;
-    position: relative;
-    text-align: center;
-
-    h2 {
-      margin-bottom: 18px;
-      font-size: 16px;
-      font-weight: bold;
+  .company-logo {
+    /* width: 400px; */
+    /* padding: 0 100px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #909399;
+    .company-logo-icon {
+      width: 120px;
+      height: 110px;
     }
-
-    .about_list, .contact_list {
-      text-align: center;
-      font-size: 14px;
-      line-height: 22px;
-
-      li {
-        margin-bottom: 15px;
-      }
-
-      a {
-        color: #d2d3d4;
-      }
+    .company-en-name {
+      font-size: 10px;
     }
   }
-
-  .about_us, .contact_us {
-    max-width: 202px;
+  .company-info-text {
+    padding: 0 100px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
   }
-
-  .focus_us {
-    text-align: left;
-    padding-left: 73px;
-
-    .media {
-      margin-top: 18px;
+  .company-info-QRcode {
+    display: flex;
+    justify-content: space-around;
+    > div {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      > div {
+        text-align: center;
+      }
     }
-
-    span {
-      margin-right: 18px;
-      flex: 0 0 auto;
-    }
-
     img {
-      width: 32px;
-    }
-
-    .weixin img {
-      width: 38px;
-      position: relative;
-      top: -2px;
-    }
-
-    h2 {
-      text-align: left;
-      font-size: 14px;
-      font-weight: normal;
-      margin-bottom: 4px;
-    }
-  }
-
-  .footer_logo {
-    margin-left: 96px;
-    height: 55px;
-    text-align: left;
-    max-width: 382px;
-    min-width: 350px;
-
-    h2 {
-      font-size: 14px;
-      font-weight: normal;
-      margin-bottom: 4px;
-    }
-
-    .logo-container {
-      display: flex;
-      margin-bottom: 9px;
-      img {
-        height: 50px;
-      }
-      .logo-text{
-        margin-left: 15px;
-        position: relative;
-        bottom: -6px;
-      }
-      .text1{
-        font-size: 21px;
-        font-weight: bold;
-        margin: 0;
-      }
-      .text2{
-        font-size: 12px;
-        margin: 0;
-      }
+      width: 85px;
+      height: 85px;
     }
   }
 }

@@ -4,8 +4,8 @@
     <div class = "box">
       <div class = "news-banner">
         <div class = "banner-title">
-          <h2>新视野</h2>
-          <h3>了解更多新闻</h3>
+          <h2>主持委员会</h2>
+          <h3>了解更多活动</h3>
         </div>
         <el-autocomplete
           class = "search-news"
@@ -30,7 +30,7 @@
         </el-autocomplete>
       </div>
       <div class = "news-container">
-        <div class = "news-card">
+        <!-- <div class = "news-card">
           <el-card shadow = "never" v-for = "(item,index) in recomNews" :key = "index">
             <router-link :to = "`/news/${item.news_path}`">
               <div class = "news-card-item">
@@ -39,7 +39,7 @@
               </div>
             </router-link>
           </el-card>
-        </div>
+        </div> -->
         <div class = "news-list">
           <el-tabs class = "list-left" v-model = "pageInfo.activeName" @tab-click = "handleClick">
             <el-tab-pane :label = "newsTabs[0].name" :name = "newsTabs[0].id">
@@ -50,6 +50,9 @@
             </el-tab-pane>
             <el-tab-pane :label = "newsTabs[2].name" :name = "newsTabs[2].id">
               <news-list :items = "newsItems.list" v-if = "pageInfo.activeName===newsTabs[2].id"></news-list>
+            </el-tab-pane>
+            <el-tab-pane :label = "newsTabs[3].name" :name = "newsTabs[3].id">
+              <news-list :items = "newsItems.list" v-if = "pageInfo.activeName===newsTabs[3].id"></news-list>
             </el-tab-pane>
             <el-pagination
               class = "pagination"
@@ -107,11 +110,15 @@ export default {
         },
         {
           id: '2',
-          name: '典型案例'
+          name: '新闻分类1'
         },
         {
           id: '3',
-          name: '通知公告'
+          name: '新闻分类2'
+        },
+        {
+          id: '4',
+          name: '新闻公告'
         }
       ],
       newsItems: {},
@@ -200,7 +207,7 @@ export default {
   },
   created () {
     this.getNewsItems()
-    this.getRecomNews()
+    // this.getRecomNews()
   },
   mounted () {
     this.$store.commit('setHeaderLogo', {

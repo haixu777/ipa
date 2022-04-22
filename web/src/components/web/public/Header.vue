@@ -34,8 +34,12 @@ export default {
           path: '/index'
         },
         {
-          title: '新闻中心',
+          title: '品牌活动',
           path: '/news'
+        },
+        {
+          title: '关于我们',
+          path: '/about'
         },
         {
           title: '产品与服务',
