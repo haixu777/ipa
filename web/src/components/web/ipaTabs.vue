@@ -42,7 +42,9 @@ export default {
   display: flex;
   .ipa-tab-navbar {
     width: 15vw;
+    justify-content: flex-start;
     .ipa-tab-navbar-item {
+      margin-bottom: 10px;
       &.active,&:hover {
         cursor: pointer;
         color: rgb(14, 154, 241);

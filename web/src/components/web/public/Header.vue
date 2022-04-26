@@ -42,9 +42,17 @@ export default {
           path: '/about'
         },
         {
-          title: '产品与服务',
-          path: '/product'
+          title: '资质展示',
+          path: '/certification'
         },
+        {
+          title: '主持考级',
+          path: '/examination'
+        },
+        // {
+        //   title: '产品与服务',
+        //   path: '/product'
+        // },
         {
           title: '人才招聘',
           path: '/job'
