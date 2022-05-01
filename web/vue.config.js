@@ -113,7 +113,7 @@ module.exports = {
       config.entry('app').clear().add('./src/main-dev.js')
       config.plugin('html').tap(args => {
         args[0].cdn = cdn.dev
-        args[0].title = 'Dev-Xanadu'
+        args[0].title = '国际认证协会（IPAFT）主持委员会'
         return args
       })
     })

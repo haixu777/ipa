@@ -49,22 +49,34 @@ export default {
           title: '主持考级',
           path: '/examination'
         },
+        {
+          title: '认证查询',
+          path: '/authentication'
+        },
+        {
+          title: '合同相关',
+          path: '/contract'
+        },
+        {
+          title: '联系我们',
+          path: '/contact'
+        }
         // {
         //   title: '产品与服务',
         //   path: '/product'
         // },
-        {
-          title: '人才招聘',
-          path: '/job'
-        },
+        // {
+        //   title: '人才招聘',
+        //   path: '/job'
+        // },
         // {
         //   title: '客户服务',
         //   path: '/customer'
         // },
-        {
-          title: '登录',
-          path: '/login'
-        }
+        // {
+        //   title: '登录',
+        //   path: '/login'
+        // }
       ],
       logo_img: [
         {

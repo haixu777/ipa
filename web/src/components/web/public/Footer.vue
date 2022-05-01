@@ -109,7 +109,7 @@ h2{
   }
 }
 
-@media only screen and (max-width: 991px) {
+/* @media only screen and (max-width: 991px) {
   .footer_content {
     flex-direction: column;
 
@@ -133,7 +133,7 @@ h2{
       text-align: left;
     }
   }
-}
+} */
 
 .qr_popover {
   width: 100%;

@@ -63,6 +63,21 @@ const routes = [
     name: 'examination',
     component: () => import(/* webpackChunkName: "about" */ '../views/web/examination.vue')
   },
+  {
+    path: '/authentication',
+    name: 'authentication',
+    component: () => import('../views/web/authentication.vue')
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('../views/web/contact.vue')
+  },
+  {
+    path: '/contract',
+    name: 'contract',
+    component: () => import('../views/web/contract.vue')
+  },
   // {
   //   path: '/signup',
   //   name: 'signup',

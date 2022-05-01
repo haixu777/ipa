@@ -2,7 +2,12 @@
   <div class="examination">
     <Header></Header>
     <div class="examination-container">
-      examination
+      暂无数据
+      <!-- <IpaTabs :tabList="tabList">
+        <IpaTabsPanel name="central">考务中心设立</IpaTabsPanel>
+        <IpaTabsPanel name="proxy">代理设立</IpaTabsPanel>
+        <IpaTabsPanel name="auth">签约授权</IpaTabsPanel>
+      </IpaTabs> -->
     </div>
     <Footer></Footer>
   </div>
@@ -11,15 +16,25 @@
 <script>
 import Header from '@/components/web/public/Header'
 import Footer from '@/components/web/public/Footer'
+// import IpaTabs from '@/components/web/ipaTabs'
+// import IpaTabsPanel from '@/components/web/ipaTabsPanel'
 
 export default {
   name: 'examination',
   data () {
-    return {}
+    return {
+      tabList: [
+        { val: 'central', text: '考务中心设立' },
+        { val: 'proxy', text: '代理设立' },
+        { val: 'auth', text: '签约授权' }
+      ]
+    }
   },
   components: {
     Header,
     Footer
+    // IpaTabs,
+    // IpaTabsPanel
   },
   mounted () {
     this.$store.commit('setHeaderLogo', {

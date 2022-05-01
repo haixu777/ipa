@@ -17,15 +17,22 @@
 <script>
 export default {
   name: 'Banner',
-  props: ['BannerHeight'],
-  data () {
-    return {
-      imgList: [
+  props: {
+    BannerHeight: {
+      required: false
+    },
+    imgList: {
+      required: false,
+      default: [
         {
           id: 0,
           imgUrl: require('../../assets/img/mic-banner-2.jpg')
         }
       ]
+    }
+  },
+  data () {
+    return {
     }
   }
 }

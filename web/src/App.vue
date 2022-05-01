@@ -21,6 +21,14 @@ export default {
   },
 
   created () {
+  },
+
+  mounted () {
+    // var scale = window.outerWidth / 1200
+    // var meta = document.createElement('meta')
+    // meta.name = 'viewport'
+    // meta.content = `width=1200, initial-scale=${scale}, maximum-scale=${scale}, user-scalable=0">`
+    // document.getElementsByTagName('head')[0].appendChild(meta)
   }
 
 }
