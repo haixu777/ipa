@@ -97,7 +97,7 @@ module.exports = {
        */
       config.plugin('html').tap(args => {
         args[0].cdn = cdn.build
-        args[0].title = 'Xanadu'
+        args[0].title = '国际认证协会（IPAFT）主持委员会'
         return args
       })
       // 压缩图片

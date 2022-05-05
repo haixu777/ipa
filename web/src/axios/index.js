@@ -2,7 +2,8 @@ import axios from 'axios'
 
 const instance = axios.create({
   // baseURL: '/api/v1', // 开发模式下
-  baseURL: 'https://xanadu.aerowang.cn/api/v1', // 线上模式
+  // baseURL: 'https://xanadu.aerowang.cn/api/v1', // 线上模式
+  baseURL: 'http://119.91.96.102:3000/api/v1', // 线上模式
   // baseURL: 'http://localhost:3000/api/v1',
   // 请求超时时间
   timeout: 10000

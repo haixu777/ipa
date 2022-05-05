@@ -86,20 +86,50 @@ export default {
       } else if (!this.major) {
         this.$message.error('请输入证书编号')
       } else {
-        const domA = document.createElement('a')
-        domA.setAttribute('href', `http://www.ipa.org.cn/Query/Certificate.aspx?id_no=${this.id_no}&major=${this.major}`)
-        domA.setAttribute('target', '_blank')
-        domA.click()
+        // document.getElementById('msgTxt').innerHTML = `
+        //   <form id="hiddenlink" action="http://www.ipa.org.cn/Query/Certificate.aspx?id_no=${this.id_no}&major=${this.major}" target="_blank">
+        //     <input type="hidden" name="id_no" value="${this.id_no}">
+        //     <input type="hidden" name="major" value="${this.major}">
+        //   </form>
+        // `
+        // const form = document.getElementById('hiddenlink')
+        // form.submit()
+        // const win = window.open('')
+        // setTimeout(() => {
+        //   window.opener = null
+        //   win.location = `http://www.ipa.org.cn/Query/Certificate.aspx?id_no=${this.id_no}&major=${this.major}`
+        // }, 1000)
+        window.open(`http://www.ipa.org.cn/Query/Certificate.aspx?id_no=${this.id_no}&major=${this.major}`, '_blank')
+        // const domA = document.createElement('a')
+        // domA.setAttribute('href', `http://www.ipa.org.cn/Query/Certificate.aspx?id_no=${this.id_no}&major=${this.major}`)
+        // domA.setAttribute('target', '_blank')
+        // domA.click()
       }
     },
     handleSubmit () {
       if (!this.keyword) {
         this.$message.error('请输入查询内容')
       } else {
-        const domA = document.createElement('a')
-        domA.setAttribute('href', `http://www.ipa.org.cn/Query/Partners.aspx?type=${this.radio}&keyword=${this.keyword}`)
-        domA.setAttribute('target', '_blank')
-        domA.click()
+        window.open(`http://www.ipa.org.cn/Query/Partners.aspx?type=${this.radio}&keyword=${this.keyword}`)
+        // document.getElementById('msgTxt').innerHTML = `
+        //   <form id="hiddenlink" action="http://www.ipa.org.cn/Query/Partners.aspx?type=${this.radio}&keyword=${this.keyword}" target="_blank">
+        //     <input type="hidden" name="type" value="${this.radio}">
+        //     <input type="hidden" name="keyword" value="${this.keyword}">
+        //   </form>
+        // `
+        // const form = document.getElementById('hiddenlink')
+        // form.submit()
+        // var s=document.getElementById("hiddenlink");
+        // s.submit();
+        // const win = window.open('http://www.ipa.org.cn')
+        // setTimeout(() => {
+        //   window.opener = null
+        //   win.location = `http://www.ipa.org.cn/Query/Partners.aspx?type=${this.radio}&keyword=${this.keyword}`
+        // }, 1000)
+        // const domA = document.createElement('a')
+        // domA.setAttribute('href', `http://www.ipa.org.cn/Query/Partners.aspx?type=${this.radio}&keyword=${this.keyword}`)
+        // domA.setAttribute('target', '_blank')
+        // domA.click()
       }
     }
   },
