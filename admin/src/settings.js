@@ -1,5 +1,5 @@
 module.exports = {
-  title: '国际认证协会（IPAFT）主持委员会',
+  title: '国际认证协会（IPA）主持委员会',
 
   /**
    * @type {boolean} true | false
