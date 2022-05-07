@@ -5,7 +5,7 @@
         <div class="ipa-logo">
           <img :src="require('../../assets/img/index/ipa-logo.png')" alt="logo">
         </div>
-        <div class = "slogan-title">国际认证协会（IPAFT）主持委员会</div>
+        <div class = "slogan-title">国际认证协会（IPA）主持委员会</div>
         <div class = "slogan-subtitle">International Profession Certification</div>
       </div>
     </div>

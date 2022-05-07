@@ -23,7 +23,7 @@
             <img src="http://www.ipa.org.cn/images/cx.png" alt="logo">
           </div>
           <div class="authentic-right-info">
-            <div class="authentic-right-title">合作机构验证/汉语机构查询</div>
+            <div class="authentic-right-title">合作机构验证</div>
             <div class="authentic-right-content">
               <div class="authentic-right-desc">
                 <p>如果与您洽谈合作的机构在本系统中查询不到，请与我们联系,共同维护您的合法权益。</p>

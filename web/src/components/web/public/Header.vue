@@ -46,17 +46,25 @@ export default {
           title: '资质展示',
           path: '/certification'
         },
+        // {
+        //   title: '主持考级',
+        //   path: '/examination'
+        // },
         {
           title: '主持考级',
-          path: '/examination'
+          path: '/contract'
         },
         {
           title: '认证查询',
           path: '/authentication'
         },
         {
-          title: '合同相关',
-          path: '/contract'
+          title: '加盟合作',
+          path: '/collaboration'
+        },
+        {
+          title: '留学直通车',
+          path: '/abroad'
         },
         {
           title: '联系我们',

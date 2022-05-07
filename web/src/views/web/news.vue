@@ -48,12 +48,12 @@
             <el-tab-pane :label = "newsTabs[1].name" :name = "newsTabs[1].id">
               <news-list :items = "newsItems.list" v-if = "pageInfo.activeName===newsTabs[1].id"></news-list>
             </el-tab-pane>
-            <el-tab-pane :label = "newsTabs[2].name" :name = "newsTabs[2].id">
+            <!-- <el-tab-pane :label = "newsTabs[2].name" :name = "newsTabs[2].id">
               <news-list :items = "newsItems.list" v-if = "pageInfo.activeName===newsTabs[2].id"></news-list>
             </el-tab-pane>
             <el-tab-pane :label = "newsTabs[3].name" :name = "newsTabs[3].id">
               <news-list :items = "newsItems.list" v-if = "pageInfo.activeName===newsTabs[3].id"></news-list>
-            </el-tab-pane>
+            </el-tab-pane> -->
             <el-pagination
               class = "pagination"
               background
@@ -106,20 +106,20 @@ export default {
       newsTabs: [
         {
           id: '1',
-          name: '最新动态'
+          name: '新闻动态'
         },
         {
           id: '2',
-          name: '新闻分类1'
-        },
-        {
-          id: '3',
-          name: '新闻分类2'
-        },
-        {
-          id: '4',
-          name: '新闻公告'
+          name: '官方公告'
         }
+        // {
+        //   id: '3',
+        //   name: '新闻分类2'
+        // },
+        // {
+        //   id: '4',
+        //   name: '新闻公告'
+        // }
       ],
       newsItems: {},
       pageInfo: {

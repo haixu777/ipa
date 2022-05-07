@@ -3,17 +3,17 @@
     <div class = "footer_content">
       <div class="company-logo">
         <img class="company-logo-icon" :src="require('@/assets/img/index/ipa-logo.png')" alt="ipa">
-        <div class="company-cn-name">国际认证协会（IPAFT）主持委员会</div>
+        <div class="company-cn-name">国际认证协会（IPA）主持委员会</div>
         <div class="company-en-name">INTERNATIONAL CERTIFICATION ASSOCIATION</div>
       </div>
       <div class="company-info-text">
-        <p>国际认证协会主持委员会是首个由国际认证协会（IPA）授权的少儿表演认证项目的委员会。委员会在文化发展的大环境下，扎根于行业，服务于艺术培训机构。围绕在国家政府关于少儿艺术行业发展的总体要求，围绕政府大力推广少儿影视表演艺术的要求下，进行创造性地开展工作。切实做好行业规划、行业促进、行业服务及认证考核证书颁发</p>
+        <p>IPA主持委员会目前拥有“少儿播音与主持、少儿主持与口才、少儿采访与编辑”三大认证方向，从“师资教育、等级认证、赛事活动、专业研学、影视输出、电视栏目”六大服务出发，以“教育为本、构建行业正能量综合平台”为发展宗旨，完善中国少儿素质教育的拼图，培养少儿表达自己的能力，为中小学校、幼儿园、少儿培训机构提供全方位的产品与服务赋能，共建少儿口才领域的全民培养机制。</p>
       </div>
       <div class="company-info-QRcode">
-        <div class="vx-code">
+        <!-- <div class="vx-code">
           <img :src="vxQrCodeUrl" alt="qrcode">
           <div>官方微信号</div>
-        </div>
+        </div> -->
         <div class="gzh-code">
           <img :src="gzhQrCodeUrl" alt="qrcode">
           <div>官方公众号</div>
@@ -30,8 +30,8 @@ export default {
     return {
       footerHeight: '',
       curWidth: '',
-      vxQrCodeUrl: 'https://aimg8.dlssyht.cn/u/2015338/module/simplepicbackground/2015338/375/749526_1589965710.jpg?x-oss-process=image/resize,m_fixed,w_81,h_81,limit_0',
-      gzhQrCodeUrl: 'https://aimg8.dlssyht.cn/u/2015338/module/simplepicbackground/2015338/375/749545_1589965760.jpg?x-oss-process=image/resize,m_fixed,w_85,h_83,limit_0'
+      // vxQrCodeUrl: 'https://aimg8.dlssyht.cn/u/2015338/module/simplepicbackground/2015338/375/749526_1589965710.jpg?x-oss-process=image/resize,m_fixed,w_81,h_81,limit_0',
+      gzhQrCodeUrl: require('@/assets/img/qrcode.jpg')
     }
   },
   methods: {

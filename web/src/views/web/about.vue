@@ -15,20 +15,28 @@
               <div class="about-title">协会简介：</div>
               <div class="about-content">
                 <div class="about-content-item">
-                  <div class="about-item-label">全称：</div>
+                  <div class="about-item-label">&nbsp;&nbsp;&nbsp;全&nbsp;&nbsp;&nbsp;&nbsp;称：</div>
                   <div class="about-item-text">国际认证协会（International Profession Certification Association）</div>
                 </div>
                 <div class="about-content-item">
-                  <div class="about-item-label">性质：</div>
+                  <div class="about-item-label">&nbsp;&nbsp;&nbsp;性&nbsp;&nbsp;&nbsp;&nbsp;质：</div>
                   <div class="about-item-text">致力于开展职业教育与考核认证的专业机构</div>
                 </div>
                 <div class="about-content-item">
-                  <div class="about-item-label">总部：</div>
+                  <div class="about-item-label">&nbsp;&nbsp;&nbsp;总&nbsp;&nbsp;&nbsp;&nbsp;部：</div>
+                  <div class="about-item-text">美国</div>
+                </div>
+                <div class="about-content-item">
+                  <div class="about-item-label">中国区总部：</div>
+                  <div class="about-item-text">北京</div>
+                </div>
+                <div class="about-content-item">
+                  <div class="about-item-label">主持委员会：</div>
                   <div class="about-item-text">海南 海口</div>
                 </div>
                 <div class="about-content-item">
-                  <div class="about-item-label">网址：</div>
-                  <div class="about-item-text">www.ipaft.org.cn</div>
+                  <div class="about-item-label">&nbsp;&nbsp;&nbsp;网&nbsp;&nbsp;&nbsp;&nbsp;址：</div>
+                  <div class="about-item-text">www.ipa.org.cn</div>
                 </div>
               </div>
               <div class="about-title">国际品牌：</div>
@@ -42,11 +50,17 @@
         </IpaTabsPanel>
         <IpaTabsPanel name="ipaft">
           <div class="ipaft-wrapper">
-            <div class="about-title">国际认证协会（IPAFT）主持委员会</div>
+            <div class="ipa-logo flex-center">
+              <div class="ipa-logo-icon"></div>
+              <div class="ipa-logo-text">
+                <div>国际认证协会（IPA）主持委员会</div>
+                <div>INTERNATIONAL PROFESSION ASSOCIATION</div>
+              </div>
+            </div>
+            <!-- <div class="about-title">国际认证协会（IPA）主持委员会</div> -->
             <div class="about-content">
-              <p>国际认证协会主持委员会是首个由国际认证协会（IPAFT）授权的少儿表演认证项目的委员会。委员会在文化发展的大环境下，扎根于行业，服务于培训机构。围绕在国家政府关于少儿艺术行业发展的总体要求，围绕政府大力推广少儿影视表演艺术的要求下，进行创造性地开展工作。切实做好行业规划、行业促进、行业服务及认证考核证书颁发。</p>
-              <p>协会涵盖了戏剧表演、影视表演、口才与表演三大方向，将从师资教育、等级认证、赛事活动、影视拍摄、演员培养五大服务出发，以“教育为本、构建行业正能量综合平台”为发展宗旨，完善中国少儿影视教育体系，树立文化自信。委员会研发编写行业最系统全面的少儿影视培训教材，提供全方位系统化师资教育培训；为少儿影视行业提供师资资质评定、演员表演能力认证及少儿专业等级认证；推出国际顶级影视推新赛事，主办或嫁接国内外电影拍摄制作，为IPA少儿演员提供更多发展的机会，及提供国内外优秀的电影公司发展平台对接，搭建少儿演员、艺人养成通道。立足行业，着眼未来，打造开放共享的少儿影视表演合作平台。</p>
-              <p>不忘初心、牢记使命、开拓进取、砥砺前行！</p>
+              <p>国际认证协会International Profession Certification Association （简称IPA）是资质齐全的驻京国际认证机构。其在北京市工商行政管理局备案号为9U10000660506808D。旗下的国际认证协会（IPA）主持委员会全国总部位于祖国美丽的海南岛海口市，是中娱传媒文化产业集团为海南自由贸港建设引进的标志性的文化品牌。也是继模特委员会、影视委员会后所引进的第三个王牌项目。旨在充份利用国际教育资源，结合本土特色，打造现代化的教育理念，培养全方位的少年英才。</p>
+              <p>委员会目前拥有“少儿播音与主持、少儿主持与口才、少儿采访与编辑”三大认证方向，从“师资教育、等级认证、赛事活动、专业研学、影视输出、电视栏目”六大服务出发，以“教育为本、构建行业正能量综合平台”为发展宗旨，完善中国少儿素质教育的拼图，培养少儿表达自己的能力，为中小学校、幼儿园、少儿培训机构提供全方位的产品与服务赋能，共建少儿口才领域的全民培养机制。</p>
             </div>
           </div>
         </IpaTabsPanel>
@@ -136,6 +150,27 @@ export default {
         height: 100%;
       }
     }
+    .ipa-logo {
+      .ipa-logo-icon {
+        width: 120px;
+        height: 110px;
+        background: url('../../assets/img/index/ipa-logo.png') no-repeat 100% 100%;
+        background-size: 120px 110px;
+      }
+      .ipa-logo-text {
+        margin-left: 20px;
+        > div {
+          &:nth-child(1) {
+            font-size: 28px;
+            font-weight: 700;
+          }
+          &:nth-child(2) {
+            font-size: 18px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
     .about-title {
       font-size: 22px;
       color: #0B5394;
@@ -145,7 +180,7 @@ export default {
     }
     .about-content {
       p {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 1.7;
         text-indent: 2rem;
       }
@@ -154,7 +189,7 @@ export default {
         font-size: 12px;
         margin-bottom: 5px;
         .about-item-label {
-          width: 40px;
+          width: 80px;
         }
         .about-item-text {
           flex: 1;

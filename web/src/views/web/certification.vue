@@ -31,7 +31,15 @@ export default {
         { id: 5, img: 'http://www.ipa.org.cn/uploads/allimg/110628/usshangbiao1.jpg', desc: 'IPA商标注册证书由美国专利和商标局颁发' },
         { id: 6, img: 'http://www.ipa.org.cn/uploads/allimg/110628/usshangbiao2.jpg', desc: '国际认证协会商标注册证书由美国专利和商标局颁发' },
         { id: 7, img: 'http://www.ipa.org.cn/uploads/allimg/110628/Britain.jpg', desc: '由英国驻华大使馆出具的《认证证明》' },
-        { id: 8, img: 'http://www.ipa.org.cn/uploads/allimg/110628/Germany.jpg', desc: '由德国驻华大使馆出具的《认证证明》' }
+        { id: 8, img: 'http://www.ipa.org.cn/uploads/allimg/110628/Germany.jpg', desc: '由德国驻华大使馆出具的《认证证明》' },
+        { id: 9, img: 'http://www.ipa.org.cn/uploads/allimg/110628/France.jpg', desc: '由法国驻华大使馆出具的《认证证明》' },
+        { id: 10, img: 'http://www.ipa.org.cn/uploads/allimg/110628/Russia.jpg', desc: '由俄罗斯驻华大使馆出具的《认证证明》' },
+        { id: 11, img: 'http://www.ipa.org.cn/uploads/allimg/110628/Australia.jpg', desc: '由澳大利亚驻华大使馆出具的《认证证明》。' },
+        { id: 12, img: 'http://www.ipa.org.cn/uploads/allimg/110628/Spain.jpg', desc: '由西班牙驻华大使馆出具的《认证证明》。' },
+        { id: 13, img: 'http://www.ipa.org.cn/uploads/allimg/110628/Korea.jpg', desc: '由韩国驻华大使馆出具的《认证证明》。' },
+        { id: 14, img: 'http://www.ipa.org.cn/uploads/allimg/110628/Brazil.jpg', desc: '由巴西驻华大使馆出具的《认证证明》。' },
+        { id: 15, img: 'http://www.ipa.org.cn/uploads/allimg/110628/India.jpg', desc: '由印度驻华大使馆出具的《认证证明》。' },
+        { id: 16, img: 'http://www.ipa.org.cn/uploads/allimg/110628/South_Africa.jpg', desc: '由南非驻华大使馆出具的《认证证明》。' }
       ]
     }
   },

@@ -41,10 +41,10 @@ export default {
   data () {
     return {
       shortcutList: [
-        { title: '爱奇艺儿童电影', img: require('@/assets/img/home/shortcut-1.jpg') },
-        { title: 'CCTV追梦少年', img: require('@/assets/img/home/shortcut-2.png') },
-        { title: '弟子规系列剧', img: require('@/assets/img/home/shortcut-3.png') },
-        { title: '少儿影视师资班', img: require('@/assets/img/home/shortcut-4.png') }
+        { title: '国际认证', img: require('@/assets/img/home/shortcut-5.png') },
+        { title: '《我的学校我做主》', img: require('@/assets/img/home/shortcut-6.png') },
+        { title: '全国系列大赛', img: require('@/assets/img/home/shortcut-7.png') },
+        { title: '少儿主持师资班', img: require('@/assets/img/home/shortcut-4.png') }
       ],
       newsList: [],
       pageInfo: {

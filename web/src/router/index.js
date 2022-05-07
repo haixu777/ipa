@@ -78,6 +78,16 @@ const routes = [
     name: 'contract',
     component: () => import('../views/web/contract.vue')
   },
+  {
+    path: '/collaboration',
+    name: 'collaboration',
+    component: () => import('../views/web/collaboration.vue')
+  },
+  {
+    path: '/abroad',
+    name: 'abroad',
+    component: () => import('../views/web/abroad.vue')
+  },
   // {
   //   path: '/signup',
   //   name: 'signup',

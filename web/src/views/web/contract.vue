@@ -152,6 +152,9 @@
           </div>
         </div>
       </div>
+      <div class="contract-stamp">
+        <div class="stamp-img"></div>
+      </div>
     </div>
     <Footer></Footer>
   </div>
@@ -243,6 +246,17 @@ export default {
           }
         }
       }
+    }
+    .contract-stamp {
+      display: flex;
+      justify-content: flex-end;
+      .stamp-img {
+        width: 505px;
+        height: 185px;
+        background: url('../../assets/img/stamp.png') no-repeat 100% 100%;
+        background-size: 505px 185px;
+      }
+      margin-bottom: 10px;
     }
   }
 }
