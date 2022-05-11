@@ -2,9 +2,9 @@
   <div class="about">
     <AwHeader style="about-header"></AwHeader>
     <div class="about-container">
-      <div class="about-banner">
-        <!-- <img :src="bannerImgUrl" alt="stage"> -->
-      </div>
+      <!-- <div class="about-banner">
+        <img :src="bannerImgUrl" alt="stage">
+      </div> -->
       <IpaTabs :tabList="tabList">
         <IpaTabsPanel name="certification">
           <div class="about-certification-wrap">
@@ -84,6 +84,58 @@
             </div>
           </div>
         </IpaTabsPanel>
+        <IpaTabsPanel name="Q&A">
+          <el-collapse v-model="activeName" accordion>
+            <el-collapse-item title="一、IPA和国际认证协会的关系是什么？" name="1">
+              <div>答：IPA是国际认证协会的简称，是国际认证协会注册的商标。</div>
+            </el-collapse-item>
+            <el-collapse-item title="二、IPA国际认证协会是什么机构？" name="2">
+              <div>答：依据《中华人民共和国境外非政府组织境内活动管理法》规定，IPA国际认证协会是一家合法经营的专业能力测评机构，本机构设立于美国，在中国地区设有常驻代表机构，从事关于专业能力认证的业务，在北京市工商行政管理局进行登记。</div>
+            </el-collapse-item>
+            <el-collapse-item title="三、IPA国际认证协会的经营范围是什么？" name="3">
+              <div>答：在美国犹他州的营业执照中载明的是教育顾问与专业认证。在中国的外国（地区）常驻机构登记证中载明的是从事与隶属外国企业有关的非营利性业务活动。</div>
+            </el-collapse-item>
+            <el-collapse-item title="四、IPA国际认证协会是否有能力、资质开展专业能力测评？" name="4">
+              <div>答：具有。根据国务院办公厅印发了国办发〔2019〕39号文件之规定，第三方机构有权利开展专业能力测验业务，颁发相应的职业技能证书，无需政府机构授权、认可。</div>
+            </el-collapse-item>
+            <el-collapse-item title="五、IPA国际认证协会与国家汉办/孔子学院是什么关系？" name="5">
+              <div>答：没有关系。</div>
+            </el-collapse-item>
+            <el-collapse-item title="六、IPA国际认证协会与培训机构是什么关系？" name="6">
+              <div>答：IPA国际认证协会为培训机构提供教材及测评体系，授权培训机构开展相关的培训活动，在培训机构的学员通过考试后，IPA国际认证协会有义务为学员颁发证书。IPA国际认证协会对培训机构收取认证测评的必要费用，费用在每名学员1000元左右，各地区有一定差异。培训机构应严格遵守IPA国际认证协会的规定开展教学培训活动，各机构均向IPA国际认证协会出具过承诺函，保证不会违规开展活动。</div>
+            </el-collapse-item>
+            <el-collapse-item title="七、IPA国际认证协会授权的事项、范围是什么？" name="7">
+              <div>答：授权培训机构作为汉语教师专业能力测评人才推荐单位，开展上述项目在特定地区的推广工作。授权范围、时间、期限详见授权书。</div>
+            </el-collapse-item>
+            <el-collapse-item title="八、《国际认证协会资质证明》证明的是什么内容？" name="8">
+              <div>答：证明IPA国际认证协会在中国开展相关业务的合法性。IPA国际认证协会初始设立于美国犹他州，该营业执照经过美国国务院认证，再经过中国驻美总领馆认证，才在中国境内才能得到有效认可。在得到上述认可后，IPA国际认证协会向北京市工商管理部门申请了外国（地区）常驻机构登记证，在中国境内取得了合法有效的主体资格，依照登记的经营范围经营相关业务。</div>
+            </el-collapse-item>
+            <el-collapse-item title="九、《国际注册专业能力证书》由谁颁发？" name="9">
+              <div>答：由IPA国际认证协会颁发。并非人社部、教育部颁发。学员需要通过IPA国际认证协会统一组织的考试，才能获发证书。</div>
+            </el-collapse-item>
+            <el-collapse-item title="十、《国际注册专业能力证书》是否与人社部联合颁发？" name="10">
+              <div>答：目前由IPA国际认证协会独自颁发。</div>
+            </el-collapse-item>
+            <el-collapse-item title="十一、《国际注册专业能力证书》是否受教育部认可？" name="11">
+              <div>答：该证书与教育部无关。</div>
+            </el-collapse-item>
+            <el-collapse-item title="十二、《国际注册专业能力证书》与国家汉办孔子学院颁发的证书是否具有同等效力？" name="12">
+              <div>答：双方为独立体系，彼此之间无直接关联。</div>
+            </el-collapse-item>
+            <el-collapse-item title="十三、《国际注册专业能力证书》是否是全球范围内最高水平的能力认证证书？" name="13">
+              <div>答：CCTV2曾经有过类似表述，我方进行了引用。</div>
+            </el-collapse-item>
+            <el-collapse-item title="十四、《国际注册专业能力证书》是否是国内外教师上岗的重要凭证？" name="14">
+              <div>答：是凭证之一，但并非强制性要求，在各地区还有其他从业资格要求，具有重要参考价值。</div>
+            </el-collapse-item>
+            <el-collapse-item title="十五、《国际注册专业能力证书》是否在162个WTO成员国受到广泛认可？" name="15">
+              <div>答：是的，但是并无强制认可的效力。</div>
+            </el-collapse-item>
+            <el-collapse-item title="十六、《国际注册专业能力证书》是否全球通用，终身有效？" name="16">
+              <div>答：是的，引用自CCTV的报道表述“世界范围内唯一被认可的汉语言教师上岗证书”。该证书是终身有效的。</div>
+            </el-collapse-item>
+          </el-collapse>
+        </IpaTabsPanel>
       </IpaTabs>
     </div>
     <AwFooter></AwFooter>
@@ -103,8 +155,10 @@ export default {
       tabList: [
         { text: '国际认证协会', val: 'certification' },
         { text: '主持委员会', val: 'ipaft' },
-        { text: '协会理念宗旨', val: 'purpose' }
-      ]
+        { text: '协会理念宗旨', val: 'purpose' },
+        { text: '问题答疑', val: 'Q&A' }
+      ],
+      activeName: '1'
     }
   },
   components: {
@@ -140,8 +194,8 @@ export default {
     //border-bottom: 1px solid #eff0f1;
   }
   .about-container {
-    padding: 60px 15vw 0;
-    min-height: calc(100vh - 60px - 267px);
+    padding: 90px 15vw 0;
+    min-height: calc(100vh - 90px - 267px);
     .about-banner {
       width: 100%;
       height: 120px;
@@ -240,6 +294,11 @@ export default {
         }
       }
     }
+  }
+  .el-collapse-item__header {
+    // color: #3370ff;
+    font-size: 20px;
+    font-weight: 700;
   }
 }
 </style>

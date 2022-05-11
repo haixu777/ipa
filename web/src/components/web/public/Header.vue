@@ -1,5 +1,5 @@
 <template>
-  <div class = "header" :class = "{header_show: headerShow, shadow: headerShadowActive }">
+  <div class = "header shadow">
     <div class = "header_container">
       <div class = "header_content">
         <div class = "logo">
@@ -39,37 +39,45 @@ export default {
           path: '/news'
         },
         {
-          title: '关于我们',
+          title: '协会介绍',
           path: '/about'
+        },
+        {
+          title: '认证体系',
+          path: '/authentication'
         },
         {
           title: '资质展示',
           path: '/certification'
         },
+        {
+          title: '电视栏目',
+          path: '/tv-show'
+        },
+        {
+          title: '专项赛事',
+          path: '/contest'
+        },
         // {
         //   title: '主持考级',
         //   path: '/examination'
         // },
+        // {
+        //   title: '主持考级',
+        //   path: '/contract'
+        // },
         {
-          title: '主持考级',
-          path: '/contract'
-        },
-        {
-          title: '认证查询',
-          path: '/authentication'
-        },
-        {
-          title: '加盟合作',
-          path: '/collaboration'
-        },
-        {
-          title: '留学直通车',
+          title: '海外留学项目',
           path: '/abroad'
         },
         {
-          title: '联系我们',
+          title: '加盟合作',
           path: '/contact'
         }
+        // {
+        //   title: '联系我们',
+        //   path: '/contact'
+        // }
         // {
         //   title: '产品与服务',
         //   path: '/product'
@@ -125,6 +133,7 @@ h2{
   box-shadow: none;
 
   position: fixed;
+  top: 0;
   z-index: 999;
   transition: transform .2s ease;
   //color: rgba(255, 255, 255, 1) !important;

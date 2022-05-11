@@ -35,7 +35,7 @@ export default {
   },
   data () {
     return {
-      BannerHeight: '100vh',
+      BannerHeight: '50vh',
       index_header: ''
     }
   },
@@ -96,6 +96,18 @@ export default {
     window.addEventListener('resize', this.setBannerHeight)
     this.setBannerHeight()
     window.addEventListener('scroll', this.scrollHandle) // 绑定页面的滚动事件
+    this.$store.commit('setHeaderLogo', {
+      headerLogoShow: false
+    })
+    this.$store.commit('setShadowActive', {
+      headerShadowActive: true
+    })
+    this.$store.commit('setNavDarkActive', {
+      navDarkActive: true
+    })
+    this.$store.commit('setHeaderShow', {
+      headerShow: false
+    })
   },
   beforeDestroy () {
     window.removeEventListener('scroll', this.scrollHandle)
@@ -104,9 +116,11 @@ export default {
 </script>
 
 <style lang = "less" scoped>
+
 .banner-wrap {
   overflow: hidden;
   position: relative;
+  margin-top: 60px;
 }
 
 .overlay {

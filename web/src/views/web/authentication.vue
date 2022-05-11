@@ -1,137 +1,416 @@
 <template>
   <div class="authentication">
     <Header></Header>
-    <div class="authentication-container">
-      <div class="banner-wrapper">
-        <Banner :imgList="bannerList"></Banner>
-      </div>
-      <div class="authentic">
-        <div class="authentic-left">
-          <div class="authentic-left-title">国际认证协会证书查询</div>
-          <div class="authentic-input">
-            <el-input type="text" v-model="id_no" placeholder="请输入身份证号"></el-input>
-          </div>
-          <div class="authentic-input">
-            <el-input type="text" v-model="major" placeholder="请输入证书编号"></el-input>
-          </div>
-          <div class="search-btn">
-            <el-button type="primary" @click="handleCertificateSearch">查询</el-button>
-          </div>
-        </div>
-        <div class="authentic-right">
-          <div class="authentic-logo">
-            <img src="http://www.ipa.org.cn/images/cx.png" alt="logo">
-          </div>
-          <div class="authentic-right-info">
-            <div class="authentic-right-title">合作机构验证</div>
-            <div class="authentic-right-content">
-              <div class="authentic-right-desc">
-                <p>如果与您洽谈合作的机构在本系统中查询不到，请与我们联系,共同维护您的合法权益。</p>
-                <p>咨询电话：010-62655711</p>
+    <div class="authentic-wrapper">
+      <IpaTabs :tabList="tabList">
+        <IpaTabsPanel name="child">
+          <div class="authentic-container">
+            <div class="authentic-top">
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/auth/auth-child-4.png')" alt="auth">
               </div>
-              <div class="authentic-right-search">
-                <div class="authentic-radio">
-                  <el-radio-group v-model="radio">
-                    <el-radio :label="'qymc'">机构名称</el-radio>
-                    <el-radio :label="'frdb'">首席代表</el-radio>
-                    <el-radio :label="'bm'">验证编码</el-radio>
-                  </el-radio-group>
-                </div>
-                <div class="authentic-input">
-                  <el-input type="text" v-model="keyword" placeholder="请输入内容"></el-input>
-                </div>
-              <div class="search-btn">
-                <el-button type="primary" @click="handleSubmit">提交</el-button>
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/auth/auth-child-5.png')" alt="auth">
               </div>
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/auth/auth-child-6.png')" alt="auth">
+              </div>
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/auth/auth-child-1.png')" alt="auth">
+              </div>
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/auth/auth-child-2.png')" alt="auth">
+              </div>
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/auth/auth-child-3.png')" alt="auth">
+              </div>
+            </div>
+            <div class="authentic-bottom">
+              <br>
+              <div class="authentic-content">
+                <div class="authentic-table">
+                  <table border="0">
+                    <tr>
+                      <th></th>
+                      <th>科目</th>
+                      <th>级别</th>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">小播音员</td>
+                      <td rowspan="4">国际注册少儿播音与主持</td>
+                      <td>初级</td>
+                    </tr>
+                    <tr>
+                      <td>中级</td>
+                    </tr>
+                    <tr>
+                      <td>高级</td>
+                    </tr>
+                    <tr>
+                      <td>专业级</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">小主持人</td>
+                      <td rowspan="4">国际注册少儿主持与口才</td>
+                      <td>初级</td>
+                    </tr>
+                    <tr>
+                      <td>中级</td>
+                    </tr>
+                    <tr>
+                      <td>高级</td>
+                    </tr>
+                    <tr>
+                      <td>专业级</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">小记者</td>
+                      <td rowspan="4">国际注册少儿采访与编辑</td>
+                      <td>初级</td>
+                    </tr>
+                    <tr>
+                      <td>中级</td>
+                    </tr>
+                    <tr>
+                      <td>高级</td>
+                    </tr>
+                    <tr>
+                      <td>专业级</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="authentic-table">
+                  <table border="0">
+                    <tr>
+                      <th>级别</th>
+                      <th>备注</th>
+                    </tr>
+                    <tr>
+                      <td>初级</td>
+                      <td>具备国语普通话对应表达能力。</td>
+                    </tr>
+                    <tr>
+                      <td>中级</td>
+                      <td>具备普通话、英语对应表达能力。</td>
+                    </tr>
+                    <tr>
+                      <td>高级</td>
+                      <td>具备普通话、英语、第二外语的对应表达能力。</td>
+                    </tr>
+                    <tr>
+                      <td>专业级</td>
+                      <td>具备多语种对应表达能力及职业能力。</td>
+                    </tr>
+                  </table>
+                  <br>
+                  <br>
+                  <br>
+                  <div class="authentic-stamp">
+                    <div class="stamp-img"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </IpaTabsPanel>
+        <IpaTabsPanel name="teacher">
+          <div class="authentic-container">
+            <div class="authentic-top">
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/auth/auth-child-4.png')" alt="auth">
+              </div>
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/auth/auth-child-5.png')" alt="auth">
+              </div>
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/auth/auth-child-6.png')" alt="auth">
+              </div>
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/auth/auth-child-7.png')" alt="auth">
+              </div>
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/auth/auth-child-8.png')" alt="auth">
+              </div>
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/auth/auth-child-9.png')" alt="auth">
+              </div>
+            </div>
+            <div class="authentic-bottom">
+              <br>
+              <div class="authentic-content">
+                <div class="authentic-table">
+                  <table border="0">
+                    <tr>
+                      <th></th>
+                      <th>科目</th>
+                      <th>级别</th>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">小播音员</td>
+                      <td rowspan="4">国际注册少儿播音与主持培训师</td>
+                      <td>初级</td>
+                    </tr>
+                    <tr>
+                      <td>中级</td>
+                    </tr>
+                    <tr>
+                      <td>高级</td>
+                    </tr>
+                    <tr>
+                      <td>专业级</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">小主持人</td>
+                      <td rowspan="4">国际注册少儿主持与口才培训师</td>
+                      <td>初级</td>
+                    </tr>
+                    <tr>
+                      <td>中级</td>
+                    </tr>
+                    <tr>
+                      <td>高级</td>
+                    </tr>
+                    <tr>
+                      <td>专业级</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">小记者</td>
+                      <td rowspan="4">国际注册少儿采访与编辑培训师</td>
+                      <td>初级</td>
+                    </tr>
+                    <tr>
+                      <td>中级</td>
+                    </tr>
+                    <tr>
+                      <td>高级</td>
+                    </tr>
+                    <tr>
+                      <td>专业级</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="authentic-table">
+                  <table border="0">
+                    <tr>
+                      <th>级别</th>
+                      <th>备注</th>
+                    </tr>
+                    <tr>
+                      <td>初级</td>
+                      <td>具备国语普通话教学能力。</td>
+                    </tr>
+                    <tr>
+                      <td>中级</td>
+                      <td>具备普通话、英语教学能力。</td>
+                    </tr>
+                    <tr>
+                      <td>高级</td>
+                      <td>具备普通话、英语、第二外语的教学能力。</td>
+                    </tr>
+                    <tr>
+                      <td>专业级</td>
+                      <td>具备多语种教学能力，及培训专业级老师的能力。</td>
+                    </tr>
+                  </table>
+                  <br>
+                  <br>
+                  <br>
+                  <div class="authentic-stamp">
+                    <div class="stamp-img"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </IpaTabsPanel>
+        <IpaTabsPanel name="fare">
+          <div class="authentic-container">
+            <div class="authentic-top">
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/contract-1.jpg')" alt="contract">
+              </div>
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/contract-3.jpg')" alt="contract">
+              </div>
+              <div class="authentic-item">
+                <img :src="require('@/assets/img/contract-2.jpg')" alt="contract">
+              </div>
+            </div>
+            <div class="authentic-bottom">
+              <div class="authentic-title">国际认证协会（IPA）主持委员会2022年认证费用标准</div>
+              <div class="authentic-content">
+                <div class="authentic-table">
+                  <table border="0">
+                    <tr>
+                      <th>科目</th>
+                      <th>级别</th>
+                      <th>认证费（元）</th>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">国际注册少儿播音与主持</td>
+                      <td>初级</td>
+                      <td>780</td>
+                    </tr>
+                    <tr>
+                      <td>中级</td>
+                      <td>880</td>
+                    </tr>
+                    <tr>
+                      <td>高级</td>
+                      <td>980</td>
+                    </tr>
+                    <tr>
+                      <td>专业</td>
+                      <td>2480</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">国际注册少儿主持与口才</td>
+                      <td>初级</td>
+                      <td>780</td>
+                    </tr>
+                    <tr>
+                      <td>中级</td>
+                      <td>880</td>
+                    </tr>
+                    <tr>
+                      <td>高级</td>
+                      <td>980</td>
+                    </tr>
+                    <tr>
+                      <td>专业</td>
+                      <td>2480</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">国际注册少儿采访与编辑</td>
+                      <td>初级</td>
+                      <td>780</td>
+                    </tr>
+                    <tr>
+                      <td>中级</td>
+                      <td>880</td>
+                    </tr>
+                    <tr>
+                      <td>高级</td>
+                      <td>980</td>
+                    </tr>
+                    <tr>
+                      <td>专业</td>
+                      <td>2480</td>
+                    </tr>
+                  </table>
+                  <span class="desc">上述价格含考试报名、证书制作</span>
+                </div>
+                <div class="authentic-table">
+                  <table border="0">
+                    <tr>
+                      <th>科目</th>
+                      <th>级别</th>
+                      <th>认证费（元）</th>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">国际注册少儿播音与主持培训师</td>
+                      <td>初级</td>
+                      <td>5980</td>
+                    </tr>
+                    <tr>
+                      <td>中级</td>
+                      <td>6980</td>
+                    </tr>
+                    <tr>
+                      <td>高级</td>
+                      <td>7980</td>
+                    </tr>
+                    <tr>
+                      <td>专业</td>
+                      <td>15800</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">国际注册少儿主持与口才培训师</td>
+                      <td>初级</td>
+                      <td>5980</td>
+                    </tr>
+                    <tr>
+                      <td>中级</td>
+                      <td>6980</td>
+                    </tr>
+                    <tr>
+                      <td>高级</td>
+                      <td>7980</td>
+                    </tr>
+                    <tr>
+                      <td>专业</td>
+                      <td>15800</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">国际注册少儿采访与编辑培训师</td>
+                      <td>初级</td>
+                      <td>5980</td>
+                    </tr>
+                    <tr>
+                      <td>中级</td>
+                      <td>6980</td>
+                    </tr>
+                    <tr>
+                      <td>高级</td>
+                      <td>7980</td>
+                    </tr>
+                    <tr>
+                      <td>专业</td>
+                      <td>15800</td>
+                    </tr>
+                  </table>
+                  <span class="desc">上述价格包含师资班培训、考试报名、证书制作</span>
+                </div>
+              </div>
+            </div>
+            <div class="authentic-stamp">
+              <div class="stamp-img"></div>
+            </div>
+          </div>
+        </IpaTabsPanel>
+        <IpaTabsPanel name="auth">
+          <Auth></Auth>
+        </IpaTabsPanel>
+      </IpaTabs>
     </div>
     <Footer></Footer>
   </div>
 </template>
-
 <script>
-import Header from '@/components/web/public/Header'
-import Footer from '@/components/web/public/Footer'
-import Banner from '@/components/web/Banner'
+import Header from '../../components/web/public/Header'
+import Footer from '../../components/web/public/Footer'
+import Auth from './check'
+import IpaTabs from '../../components/web/ipaTabs'
+import IpaTabsPanel from '../../components/web/ipaTabsPanel'
 export default {
-  name: 'authentication',
   data () {
     return {
-      id_no: '',
-      major: '',
-      radio: 'qymc',
-      keyword: '',
-      bannerList: [
-        {
-          id: 2,
-          imgUrl: require('@/assets/img/certification-banner.png')
-        }
+      tabList: [
+        { text: '少儿认证', val: 'child' },
+        { text: '师资认证', val: 'teacher' },
+        { text: '认证费用', val: 'fare' },
+        { text: '证书/网点查询', val: 'auth' }
       ]
     }
   },
   components: {
     Header,
     Footer,
-    Banner
-  },
-  methods: {
-    handleCertificateSearch () {
-      const idCardReg = /^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/
-      if (!idCardReg.test(this.id_no)) {
-        this.$message.error('身份证号码输入有误，请重新输入')
-      } else if (!this.major) {
-        this.$message.error('请输入证书编号')
-      } else {
-        // document.getElementById('msgTxt').innerHTML = `
-        //   <form id="hiddenlink" action="http://www.ipa.org.cn/Query/Certificate.aspx?id_no=${this.id_no}&major=${this.major}" target="_blank">
-        //     <input type="hidden" name="id_no" value="${this.id_no}">
-        //     <input type="hidden" name="major" value="${this.major}">
-        //   </form>
-        // `
-        // const form = document.getElementById('hiddenlink')
-        // form.submit()
-        // const win = window.open('')
-        // setTimeout(() => {
-        //   window.opener = null
-        //   win.location = `http://www.ipa.org.cn/Query/Certificate.aspx?id_no=${this.id_no}&major=${this.major}`
-        // }, 1000)
-        window.open(`http://www.ipa.org.cn/Query/Certificate.aspx?id_no=${this.id_no}&major=${this.major}`, '_blank')
-        // const domA = document.createElement('a')
-        // domA.setAttribute('href', `http://www.ipa.org.cn/Query/Certificate.aspx?id_no=${this.id_no}&major=${this.major}`)
-        // domA.setAttribute('target', '_blank')
-        // domA.click()
-      }
-    },
-    handleSubmit () {
-      if (!this.keyword) {
-        this.$message.error('请输入查询内容')
-      } else {
-        window.open(`http://www.ipa.org.cn/Query/Partners.aspx?type=${this.radio}&keyword=${this.keyword}`)
-        // document.getElementById('msgTxt').innerHTML = `
-        //   <form id="hiddenlink" action="http://www.ipa.org.cn/Query/Partners.aspx?type=${this.radio}&keyword=${this.keyword}" target="_blank">
-        //     <input type="hidden" name="type" value="${this.radio}">
-        //     <input type="hidden" name="keyword" value="${this.keyword}">
-        //   </form>
-        // `
-        // const form = document.getElementById('hiddenlink')
-        // form.submit()
-        // var s=document.getElementById("hiddenlink");
-        // s.submit();
-        // const win = window.open('http://www.ipa.org.cn')
-        // setTimeout(() => {
-        //   window.opener = null
-        //   win.location = `http://www.ipa.org.cn/Query/Partners.aspx?type=${this.radio}&keyword=${this.keyword}`
-        // }, 1000)
-        // const domA = document.createElement('a')
-        // domA.setAttribute('href', `http://www.ipa.org.cn/Query/Partners.aspx?type=${this.radio}&keyword=${this.keyword}`)
-        // domA.setAttribute('target', '_blank')
-        // domA.click()
-      }
-    }
+    Auth,
+    IpaTabs,
+    IpaTabsPanel
   },
   mounted () {
     this.$store.commit('setHeaderLogo', {
@@ -153,81 +432,77 @@ export default {
 <style lang="less" scope>
 .authentication {
   min-height: 100vh;
-  .authentication-container {
-    position: relative;
-    padding: 60px 15vw 0;
+  .authentic-wrapper {
+    padding-top: 90px;
+    min-height: calc(100vh - 60px - 17px - 280px);
+  }
+  .authentic-container {
+    padding: 0 5vw 0;
+    padding-left: 0;
     min-height: calc(100vh - 60px - 267px);
-    .el-carousel__container {
-      height: 220px;
-      .el-carousel__item {
-        border-radius: 10px;
-      }
-      .img_con :after {
-        background: unset;
-      }
-    }
-    .element-img {
-      background: #fff;
-      object-fit: initial;
-    }
-    .authentic {
+    .authentic-top {
       display: flex;
-      padding: 20px;
-      .authentic-left {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 250px;
-        border-right: 1px dashed #ccc;
-        padding: 0 30px;
-        .authentic-left-title {
-          font-size: 20px;
-          font-weight: 700;
-        }
-      }
-      .authentic-right {
+      // padding-top: 20px;
+      .authentic-item {
         flex: 1;
+        padding: 5px;
+        // border: 1px solid lightgray;
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .authentic-bottom {
+      .authentic-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 20px 0;
+      }
+      .authentic-content {
         display: flex;
-        .authentic-logo {
-          width: 250px;
-          padding: 0 20px;
-        }
-        .authentic-right-info {
+        > div {
           flex: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          .authentic-right-title {
-            font-size: 20px;
+          &:nth-child(2) {
+            flex: 1.3;
+            padding-left: 50px;
+          }
+          .desc {
+            display: inline-block;
+            font-size: 18px;
             font-weight: 700;
+            margin: 20px 0;
           }
-          .authentic-right-content {
-            display: flex;
-            .authentic-right-desc {
-              // margin-top: 20px;
-              width: 350px;
-              color: #999;
-              padding: 20px;
+          table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+            tr {
+              height: 30px;
+              &:first-child {
+                background: lightsalmon;
+              }
             }
-            .authentic-right-search {
-              margin-top: 20px;
+            th,td {
+              text-align: center;
+              border: 1px solid #000;
+              min-height: 60px;
             }
           }
         }
       }
-      .authentic-input {
-        width: 100%;
-        margin: 10px 0;
-        .el-input {
-          width: 100%;
-        }
+    }
+    .authentic-stamp {
+      display: flex;
+      justify-content: flex-end;
+      .stamp-img {
+        width: 505px;
+        height: 185px;
+        background: url('../../assets/img/stamp.png') no-repeat 100% 100%;
+        background-size: 505px 185px;
       }
-      .search-btn {
-        width: 100%;
-        button {
-          width: 100%;
-        }
-      }
+      margin-bottom: 10px;
     }
   }
 }

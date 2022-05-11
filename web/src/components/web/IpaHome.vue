@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="news-image flex-center">
-        <img :src="require('@/assets/img/home/news-avatar.jpg')" alt="news">
+        <img :src="require('@/assets/img/home/child-logo.png')" alt="news">
       </div>
     </div>
   </div>
@@ -41,10 +41,12 @@ export default {
   data () {
     return {
       shortcutList: [
-        { title: '国际认证', img: require('@/assets/img/home/shortcut-5.png') },
-        { title: '《我的学校我做主》', img: require('@/assets/img/home/shortcut-6.png') },
-        { title: '全国系列大赛', img: require('@/assets/img/home/shortcut-7.png') },
-        { title: '少儿主持师资班', img: require('@/assets/img/home/shortcut-4.png') }
+        { title: '师资培训', img: require('@/assets/img/home/shortcut-4.png') },
+        { title: '专业教材', img: require('@/assets/img/home/shortcut-12.png') },
+        { title: '考试认证', img: require('@/assets/img/home/shortcut-5.png') },
+        { title: '电视栏目', img: require('@/assets/img/home/shortcut-13.png') },
+        { title: '专项赛事', img: require('@/assets/img/home/shortcut-11.png') },
+        { title: '留学计划', img: require('@/assets/img/home/shortcut-14.png') }
       ],
       newsList: [],
       pageInfo: {
@@ -72,7 +74,7 @@ export default {
 
 <style lang="less" scoped>
 .home-container {
-  padding: 100px 15vw;
+  padding: 50px 15vw;
   .home-item {
     margin-bottom: 100px;
     &.home-shortcut {
@@ -80,6 +82,8 @@ export default {
       .shortcut-item {
         flex: 1;
         margin: 0 .5vw;
+        display: flex;
+        flex-direction: column;
         .shortcut-title {
           border-left: rgb(7, 55, 99) 6px solid;
           padding-left: 10px;
@@ -89,8 +93,10 @@ export default {
         }
         .shortcut-content {
           width: 100%;
+          flex: 1;
           img {
             width: 100%;
+            height: 90%;
           }
         }
       }
@@ -98,7 +104,7 @@ export default {
     &.home-news {
       display: flex;
       justify-content: space-between;
-      background: url('../../assets/img/home/news-bg.png') no-repeat 100% 100%;
+      // background: url('../../assets/img/home/news-bg.png') no-repeat 100% 100%;
       background-size: 25% 100%;
       height: 40vh;
       overflow: hidden;

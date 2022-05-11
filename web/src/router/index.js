@@ -88,6 +88,16 @@ const routes = [
     name: 'abroad',
     component: () => import('../views/web/abroad.vue')
   },
+  {
+    path: '/tv-show',
+    name: 'tvshow',
+    component: () => import('../views/web/tvShow.vue')
+  },
+  {
+    path: '/contest',
+    name: 'contest',
+    component: () => import('../views/web/contest.vue')
+  },
   // {
   //   path: '/signup',
   //   name: 'signup',

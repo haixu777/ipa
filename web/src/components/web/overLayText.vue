@@ -7,6 +7,7 @@
         </div>
         <div class = "slogan-title">国际认证协会（IPA）主持委员会</div>
         <div class = "slogan-subtitle">International Profession Certification</div>
+        <div class = "sub-title">一站式服务平台</div>
       </div>
     </div>
   </div>
@@ -35,8 +36,8 @@ export default {
   cursor: default;
   //background: rgba(51,112,255,.2);
   .ipa-logo {
-    width: 300px;
-    height: 278px;
+    width: 180px;
+    height: 167px;
     margin: 0 auto;
     img {
       width: 100%;
@@ -59,6 +60,11 @@ export default {
       opacity: .8;
       margin-top: 14px;
       position: relative;
+    }
+    .sub-title {
+      font-size: 22px;
+      // color: lightgray;
+      // opacity: .8;
     }
   }
 }

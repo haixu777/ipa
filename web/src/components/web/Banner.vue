@@ -1,5 +1,5 @@
 <template>
-  <div class = "banner">
+  <div class = "banner" ref="banner">
     <div class = "Limit">
       <el-carousel :interval = "2000" arrow = "hover" :height = "BannerHeight" :autoplay = "true"
                    ref = "carousel" trigger = "click" indicator-position = "none">
@@ -11,6 +11,7 @@
         </el-carousel-item>
       </el-carousel>
     </div>
+    <div class="mic-logo"></div>
   </div>
 </template>
 
@@ -23,27 +24,47 @@ export default {
     },
     imgList: {
       required: false,
-      default: [
-        {
+      default: function () {
+        return [{
           id: 0,
-          imgUrl: require('../../assets/img/mic-banner-2.jpg')
-        }
-      ]
+          imgUrl: require('../../assets/img/banner-bg.jpg')
+        }]
+      }
     }
   },
   data () {
     return {
+      bannerWidth: 1
     }
+  },
+  mounted () {
+    // const ratio = 2.234 // banner 宽高比
+    // this.bannerWidth = this.$refs.banner.offsetHeight * ratio
+    // window.onresize = () => {
+    //   this.bannerWidth = this.$refs.banner.offsetHeight * ratio
+    // }
   }
 }
 </script>
 
 <style lang = "less" scoped>
-//.img_cover{
-//  width: 100%;
-//  height: 100%;
-//  background: rgba(51,112,255,.2);
-//}
+.banner {
+  position: relative;
+  margin: 0 auto;
+  .mic-logo {
+    position: absolute;
+    bottom: 50px;
+    left: 13vw;
+    z-index: 9999;
+    width: 5%;
+    height: 35%;
+    /* width: 5.208vw;
+    height: 23.148vh; */
+    background: url('../../assets/img/mic-logo.png') no-repeat 100% 100%;
+    background-size: 100% 100%;
+    /* background-size: 5.208vw 23.148vh; */
+  }
+}
 
 .el-carousel__item h3 {
   color: #475669;
@@ -83,8 +104,6 @@ export default {
 .element-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-
 }
 
 /deep/ .el-carousel__arrow {
