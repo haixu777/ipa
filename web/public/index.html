@@ -8,6 +8,13 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
         <link rel = "icon" href = "<%= BASE_URL %>favicon.ico">
         <title><%= htmlWebpackPlugin.options.title %></title>
+        <script>
+            window._AMapSecurityConfig = {
+            serviceHost: 'http://119.91.96.102/_AMapService'
+            // 例如 ：serviceHost:'http://1.1.1.1:80/_AMapService',
+            }
+        </script>
+        <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=107e0fae61e158fa94fd2b9adaa6173a"></script>
         <!-- 使用CDN的CSS文件 -->
         <% for (var i in
         htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.css) { %>

@@ -194,7 +194,9 @@ export default {
     //border-bottom: 1px solid #eff0f1;
   }
   .about-container {
-    padding: 90px 15vw 0;
+    // padding: 90px 15vw 0;
+    padding-top: 90px;
+    padding-right: 10vw;
     min-height: calc(100vh - 90px - 267px);
     .about-banner {
       width: 100%;

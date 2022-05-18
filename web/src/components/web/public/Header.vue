@@ -67,7 +67,7 @@ export default {
         //   path: '/contract'
         // },
         {
-          title: '海外留学项目',
+          title: '升学服务',
           path: '/abroad'
         },
         {

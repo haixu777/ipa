@@ -4,8 +4,8 @@
     <div class = "box">
       <div class = "news-banner">
         <div class = "banner-title">
-          <h2>主持委员会</h2>
-          <h3>了解更多活动</h3>
+          <h2>国际认证协会（IPA）主持委员会</h2>
+          <h3>International Profession Certification</h3>
         </div>
         <el-autocomplete
           class = "search-news"

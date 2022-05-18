@@ -155,7 +155,7 @@ export default {
   // min-height: 100vh;
   .authentication-container {
     position: relative;
-    padding: 60px 0;
+    // padding: 60px 0;
     // min-height: calc(100vh - 60px - 267px);
     .el-carousel__container {
       height: 160px;

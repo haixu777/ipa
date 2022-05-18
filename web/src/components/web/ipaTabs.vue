@@ -41,13 +41,20 @@ export default {
 .ipa-tabs {
   display: flex;
   .ipa-tab-navbar {
-    width: 15vw;
+    box-sizing: border-box;
+    padding: 0 5vw;
+    width: 20vw;
     justify-content: flex-start;
     .ipa-tab-navbar-item {
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      // border-radius: 5px;
       &.active,&:hover {
         cursor: pointer;
-        color: rgb(14, 154, 241);
+        background: #0e9af1;
+        color: #fff;
       }
     }
   }
