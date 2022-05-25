@@ -59,13 +59,13 @@
       >
         登录
       </el-button>
-      <el-link
+      <!-- <el-link
         type="info"
         :underline="false"
         href="/admin/#/register"
       >
         还没有账号？点击注册
-      </el-link>
+      </el-link> -->
     </el-form>
   </div>
 </template>

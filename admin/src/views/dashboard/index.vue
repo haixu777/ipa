@@ -14,7 +14,7 @@
             <h3>{{ getTimeState().before }} {{ basicInfo.accountName }} ，{{ getTimeState().after }} </h3>
             <p>{{ basicInfo.description }}</p>
           </el-col>
-          <el-col
+          <!-- <el-col
             v-if="!flag"
             :span="4"
           >
@@ -26,11 +26,13 @@
                 contain
               />
             </div>
-          </el-col>
+          </el-col> -->
         </el-row>
       </el-card>
     </el-row>
-    <el-row class="product-carousel">
+    <el-row
+      v-if="false"
+      class="product-carousel">
       <el-card>
         <h2>产品预览</h2>
         <el-carousel
@@ -203,12 +205,12 @@ export default {
     console.log(this.roleName[0])
     if (this.roleName[0] !== '管理员') {
       this.flag = false
-      this.$message({
-        showClose: true,
-        message: `你当前的角色为 ${this.roleName}，如果需要体验管理员权限，请查看公众号，谢谢`,
-        type: 'warning',
-        duration: 0
-      })
+      // this.$message({
+      //   showClose: true,
+      //   message: `你当前的角色为 ${this.roleName}，如果需要体验管理员权限，请查看公众号，谢谢`,
+      //   type: 'warning',
+      //   duration: 0
+      // })
     }
   },
   // 每次进入路有前，重新获取数据

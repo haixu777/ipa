@@ -228,7 +228,7 @@ export default {
   name: 'login',
   mounted () {
     // const devUrl = 'http://localhost:9000/admin/#/login'
-    const prodUrl = 'https://xanadu.aerowang.cn/admin/#/login'
+    const prodUrl = '/admin/#/login'
     window.open(prodUrl, '_blank')
     this.$router.push('/index')
   }

@@ -77,7 +77,7 @@
                 @change = "searchByDate(pageInfo.selectDate)">
               </el-date-picker>
             </div>
-            <hot-news></hot-news>
+            <!-- <hot-news></hot-news> -->
           </div>
         </div>
       </div>
@@ -90,12 +90,12 @@
 import AwHeader from '../../components/web/public/Header'
 import AwFooter from '../../components/web/public/Footer'
 import NewsList from '../../components/web/newsList'
-import HotNews from '../../components/web/hotNews'
+// import HotNews from '../../components/web/hotNews'
 
 export default {
   name: 'news',
   components: {
-    HotNews,
+    // HotNews,
     NewsList,
     AwFooter,
     AwHeader

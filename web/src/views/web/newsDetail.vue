@@ -15,7 +15,7 @@
           <article class = "article" v-html = "news_detail.content"></article>
         </div>
       </div>
-      <hot-news class = "right"></hot-news>
+      <!-- <hot-news class = "right"></hot-news> -->
     </div>
     <AwFooter></AwFooter>
   </div>
@@ -24,12 +24,12 @@
 <script>
 import AwHeader from '../../components/web/public/Header'
 import AwFooter from '../../components/web/public/Footer'
-import HotNews from '../../components/web/hotNews'
+// import HotNews from '../../components/web/hotNews'
 
 export default {
   name: 'newsDetail',
   components: {
-    HotNews,
+    // HotNews,
     AwHeader,
     AwFooter
   },

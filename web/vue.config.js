@@ -22,18 +22,18 @@ const cdn = {
   // 生产环境
   build: {
     css: [
-      'https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/theme-chalk/index.css',
-      'https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/theme-chalk/display.css',
-      'https://cdn.jsdelivr.net/npm/mavon-editor@2.9.1/dist/css/index.css'
+      'https://unpkg.com/element-ui@2.15.1/lib/theme-chalk/index.css',
+      'https://unpkg.com/element-ui@2.15.1/lib/theme-chalk/display.css',
+      'https://unpkg.com/mavon-editor@2.9.1/dist/css/index.css'
     ],
     js: [
-      'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js',
-      'https://cdn.jsdelivr.net/npm/vue-router@3.2.0/dist/vue-router.min.js',
-      'https://cdn.jsdelivr.net/npm/vuex@3.4.0/dist/vuex.min.js',
-      'https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/index.js',
-      // 'https://cdn.jsdelivr.net/npm/mavon-editor@2.9.1/dist/mavon-editor.min.js',
-      'https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js'
-      // 'https://unpkg.com/element-ui/lib/index.js'
+      'https://unpkg.com/vue@2.6.11/dist/vue.min.js',
+      'https://unpkg.com/vue-router@3.2.0/dist/vue-router.min.js',
+      'https://unpkg.com/vuex@3.4.0/dist/vuex.min.js',
+      'https://unpkg.com/element-ui@2.15.1/lib/index.js',
+      'https://unpkg.com/mavon-editor@2.9.1/dist/mavon-editor.min.js',
+      'https://unpkg.com/axios@0.18.0/dist/axios.min.js',
+      'https://unpkg.com/element-ui/lib/index.js'
     ]
   }
 }

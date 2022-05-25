@@ -1,10 +1,10 @@
 <template>
   <div class="about">
     <AwHeader style="about-header"></AwHeader>
+    <div class="about-banner">
+      <img :src="bannerImgUrl" alt="stage">
+    </div>
     <div class="about-container">
-      <!-- <div class="about-banner">
-        <img :src="bannerImgUrl" alt="stage">
-      </div> -->
       <IpaTabs :tabList="tabList">
         <IpaTabsPanel name="certification">
           <div class="about-certification-wrap">
@@ -151,7 +151,7 @@ export default {
   name: 'about',
   data () {
     return {
-      bannerImgUrl: require('@/assets/img/about-banner.jpg'),
+      bannerImgUrl: require('@/assets/img/banner-about.png'),
       tabList: [
         { text: '国际认证协会', val: 'certification' },
         { text: '主持委员会', val: 'ipaft' },
@@ -188,6 +188,15 @@ export default {
 .about {
   min-height: 100vh;
   color: #555;
+  .about-banner {
+    padding-top: 60px;
+    width: 100%;
+    height: 350px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
   .about_header {
     background-color: rgba(255, 255, 255, .5);
     backdrop-filter: blur(10px);
@@ -195,17 +204,9 @@ export default {
   }
   .about-container {
     // padding: 90px 15vw 0;
-    padding-top: 90px;
+    padding-top: 30px;
     padding-right: 10vw;
     min-height: calc(100vh - 90px - 267px);
-    .about-banner {
-      width: 100%;
-      height: 120px;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
     .ipa-logo {
       .ipa-logo-icon {
         width: 120px;

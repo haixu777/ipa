@@ -1,6 +1,9 @@
 <template>
   <div class="certification">
     <Header></Header>
+    <div class="about-banner">
+      <img :src="bannerImgUrl" alt="stage">
+    </div>
     <div class="certification-container flex-center-col">
       <div class="title">国际认证协会（IPA）资质展示</div>
       <div class="content">
@@ -40,7 +43,8 @@ export default {
         { id: 14, img: 'http://www.ipa.org.cn/uploads/allimg/110628/Brazil.jpg', desc: '由巴西驻华大使馆出具的《认证证明》。' },
         { id: 15, img: 'http://www.ipa.org.cn/uploads/allimg/110628/India.jpg', desc: '由印度驻华大使馆出具的《认证证明》。' },
         { id: 16, img: 'http://www.ipa.org.cn/uploads/allimg/110628/South_Africa.jpg', desc: '由南非驻华大使馆出具的《认证证明》。' }
-      ]
+      ],
+      bannerImgUrl: require('@/assets/img/banner-cert.png')
     }
   },
   components: {
@@ -67,6 +71,15 @@ export default {
 <style lang="less" scope>
 .certification {
   min-height: 100vh;
+  .about-banner {
+    padding-top: 60px;
+    width: 100%;
+    height: 350px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
   .certification-container {
     padding: 60px 15vw 0;
     min-height: calc(100vh - 60px - 267px);

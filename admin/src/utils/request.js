@@ -1,4 +1,5 @@
 import axios from 'axios'
+import qs from 'qs'
 import { MessageBox } from 'element-ui'
 import store from '@/store'
 import { getToken } from '@/utils/auth'
@@ -7,7 +8,12 @@ import { getToken } from '@/utils/auth'
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
   // withCredentials:true，跨域请求时发送cookies
-  timeout: 5000 // 请求超时
+  timeout: 5000, // 请求超时
+  // transformRequest: [
+  //   function (data) {
+  //     return qs.stringify(data)
+  //   }
+  // ]
 })
 
 // 请求拦截器
@@ -22,6 +28,8 @@ service.interceptors.request.use(
       // config.headers['X-Token'] = getToken()
       config.headers.Authorization = 'Bearer ' + getToken()
     }
+    // console.log(config)
+    // config.data = qs.stringify(config.data)
     return config
   },
   error => {

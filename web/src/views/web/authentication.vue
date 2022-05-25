@@ -1,5 +1,8 @@
 <template>
   <div class="authentication">
+    <div class="about-banner">
+      <img :src="bannerImgUrl" alt="stage">
+    </div>
     <Header></Header>
     <div class="authentic-wrapper">
       <IpaTabs :tabList="tabList">
@@ -478,7 +481,8 @@ export default {
         { text: '认证费用', val: 'fare' },
         { text: '考试流程', val: 'exam' },
         { text: '证书/网点查询', val: 'auth' }
-      ]
+      ],
+      bannerImgUrl: require('@/assets/img/banner-auth.png')
     }
   },
   components: {
@@ -508,8 +512,17 @@ export default {
 <style lang="less" scope>
 .authentication {
   min-height: 100vh;
+  .about-banner {
+    padding-top: 60px;
+    width: 100%;
+    height: 350px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
   .authentic-wrapper {
-    padding-top: 90px;
+    padding-top: 30px;
     min-height: calc(100vh - 60px - 17px - 280px);
   }
   .authentic-container {

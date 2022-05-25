@@ -1,6 +1,9 @@
 <template>
   <div class="contact-container">
     <Header></Header>
+    <div class="about-banner">
+      <img :src="bannerImgUrl" alt="stage">
+    </div>
     <div class="contact-wrapper">
       <div class="contact-news">
         <div class="contact-news-img flex-center">
@@ -103,6 +106,7 @@ import Footer from '../../components/web/public/Footer'
 export default {
   data () {
     return {
+      bannerImgUrl: require('@/assets/img/banner-about.png')
     }
   },
   components: {
@@ -145,8 +149,17 @@ export default {
 <style lang="less" scope>
   .contact-container {
     min-height: 100vh;
+    .about-banner {
+      padding-top: 60px;
+      width: 100%;
+      height: 350px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
     .contact-wrapper {
-      padding: 60px 15vw 0;
+      padding: 0px 15vw 0;
       min-height: calc(100vh - 60px - 267px);
       .contact-news {
         width: 40vw;
