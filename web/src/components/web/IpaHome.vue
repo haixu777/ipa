@@ -44,7 +44,7 @@ export default {
         { title: '师资培训', img: require('@/assets/img/home/shortcut-4.png') },
         { title: '专业教材', img: require('@/assets/img/home/shortcut-12.png') },
         { title: '考试认证', img: require('@/assets/img/home/shortcut-5.png') },
-        { title: '电视栏目', img: require('@/assets/img/home/shortcut-13.png') },
+        { title: '电视栏目', img: require('@/assets/img/home/news-4.jpg') },
         { title: '专项赛事', img: require('@/assets/img/home/shortcut-11.png') },
         { title: '留学计划', img: require('@/assets/img/home/shortcut-14.png') }
       ],

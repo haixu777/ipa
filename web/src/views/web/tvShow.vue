@@ -12,7 +12,7 @@
         <p>《我的学校我做主》是一档少儿美育综合电视栏目，充分整合了教育部门、中小学校、幼儿园、培训机构的人才和内容，通过电视艺术的手段进行展示，秉承着<b>“传播正能量、专业化指导、真学真体验、身边人身边事”</b>的宗旨，深度挖掘地方特色、学校特色、节目特色，同时收获了教育者、学生、家长的三方赞誉。</p>
         <div class="tv-img-wrapper flex-center">
           <div class="tv-img flex-center">
-            <img :src="require('@/assets/img/tv/tv-2.png')" alt="tv">
+            <img :src="require('@/assets/img/home/news-4.jpg')" alt="tv">
           </div>
         </div>
         <p>目前，《我的学校我做主》栏目已经在广东、海南、浙江、江西、贵州五个省落地播放，接下来还将走进更多的省市。</p>
