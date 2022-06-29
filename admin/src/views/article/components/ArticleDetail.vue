@@ -53,12 +53,31 @@
         <span v-if="isEdit">封面图片若不修改，则使用原封面图片</span>
       </el-form-item>
       <el-form-item>
-        <!--<el-button type="primary" @click="submitForm">仅保存</el-button>-->
-        <el-button v-if="!isEdit" type="primary" round plain @click="submitForm">发布</el-button>
+        <el-button type="primary" @click="handlePreview">预览</el-button>
+        <el-button v-if="!isEdit" type="primary" @click="submitForm(false)">仅保存</el-button>
+        <el-button v-if="!isEdit" type="primary" round plain @click="submitForm(true)">直接发布</el-button>
         <el-button v-if="isEdit" type="primary" round plain @click="updateForm">确认修改</el-button>
       </el-form-item>
     </el-form>
-
+    <el-dialog
+      title="文章详情"
+      :visible.sync="previewVisible"
+      width="60%"
+    >
+      <div>
+        <el-breadcrumb separator-class="el-icon-arrow-right">
+          <el-breadcrumb-item :to="{ path: '/index' }">首页</el-breadcrumb-item>
+          <el-breadcrumb-item>{{ categoryText }}</el-breadcrumb-item>
+          <el-breadcrumb-item>{{ postForm.title }}</el-breadcrumb-item>
+        </el-breadcrumb>
+        <div class="content">
+          <h1>{{ postForm.title }}</h1>
+          <!-- <span>{{ articleDetail.publish_time }}</span> -->
+          <el-divider><i class="el-icon-view" /></el-divider>
+          <article class="article" v-html="postForm.content" />
+        </div>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
@@ -83,7 +102,7 @@ export default {
         description: '', // 文章摘要
         category: '', // 文章类别ID
         coverImg: '', // 文章封面图片
-        content: ''
+        content: '',
         // state: '0'
       },
       rules: {
@@ -124,7 +143,9 @@ export default {
       // 是否禁用上传
       uploadDisabled: false,
       // 上传文件列表
-      fileList: []
+      fileList: [],
+      previewVisible: false,
+      categoryText: ''
     }
   },
   computed: {
@@ -204,11 +225,11 @@ export default {
       return isLt1M
     },
     // 上传中
-    imgOnProgress(event, file) {
+    imgOnProgress() {
       this.uploadDisabled = true
     },
     // 移除封面图片
-    handleRemove(file) {
+    handleRemove() {
       this.uploadDisabled = false
       // deleteFile(imgUrl).then(response => {
       //   const res = response.data
@@ -225,26 +246,26 @@ export default {
       this.dialogVisible = true
     },
     // 发布
-    submitForm() {
-      this.postForm.state = '1'
+    submitForm(publish) {
+      this.postForm.state = publish ? '1' : '0'
       this.$refs.postForm.validate((valid) => {
         if (valid) {
           createArticle(this.postForm).then(response => {
             const res = response.data
             if (res.status === 200) {
               this.path = res.data.path
-              this.$message.success('发布成功！')
+              this.$message.success(publish ? '发布成功！' : '保存成功！')
               this.postForm = {}
               this.$refs.uploadImg.clearFiles()
               this.uploadDisabled = false
               this.$router.push('list')
             } else {
               console.log(`err---${res}`)
-              this.$message.error('发布失败,请联系管理员！')
+              this.$message.error(`${publish ? '发布' : '保存'}失败,请联系管理员！`)
             }
           })
         } else {
-          this.$message.error('发布失败，请检查内容是否填写完整！')
+          this.$message.error(`${publish ? '发布' : '保存'}失败，请检查内容是否填写完整！`)
           return false
         }
       })
@@ -270,6 +291,12 @@ export default {
           return false
         }
       })
+    },
+    handlePreview() {
+      if (this.postForm.category) {
+        this.categoryText = this.category.filter((item) => item.type_id == this.postForm.category)[0].type_name
+      }
+      this.previewVisible = true
     }
   }
 }
