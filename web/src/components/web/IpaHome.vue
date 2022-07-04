@@ -22,7 +22,9 @@
         <div class="news-item" v-for="news in newsList" :key="news.news_id">
           <div class="news-cover flex-center"><img :src="news.cover_img" :alt="news.news_desc"></div>
           <div class="news-content">
-            <div class="news-title">{{news.news_title}}</div>
+            <router-link :to = "`/news/${news.news_path}`" target="_blank">
+              <div class="news-title">{{news.news_title}}</div>
+            </router-link>
             <div class="news-desc">{{news.news_desc}}</div>
           </div>
         </div>
@@ -141,7 +143,9 @@ export default {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            .news-title {
+            .news-title,a {
+              color: #000;
+              font-weight: 500;
               font-size: 16px;
               &:hover {
                 cursor: pointer;
